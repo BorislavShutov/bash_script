@@ -1,0 +1,29 @@
+#!/bin/bash
+
+echo  "What project you need : "
+
+echo "1 python"
+echo "2 bash"
+
+read doing
+
+case $doing in
+1)
+cd Documents/Python/Proects
+ls
+mkdir $1
+cd $1
+touch $2.py
+/opt/sublime_text/sublime_text $2
+;;
+
+2)
+cd Documents/Bash
+ls
+mkdir $1
+cd $1
+touch $2
+/opt/sublime_text/sublime_text $2
+;;
+
+esac
