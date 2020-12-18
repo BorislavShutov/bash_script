@@ -45,7 +45,7 @@ esac
 
 
 2)
-echo "somethink else"
+python 1.py
 ;;
 esac
 
