@@ -1,29 +1,52 @@
 #!/bin/bash
 
-echo  "What project you need : "
+echo "Hello $LOGNAME"
 
-echo "1 python"
-echo "2 bash"
+echo "what you want:"
+echo "Type 1 for programming"
+echo "Type 2 for somethink else"
 
 read doing
 
 case $doing in
 1)
-cd Documents/Python/Proects
-ls
-mkdir $1
-cd $1
-touch $2.py
-/opt/sublime_text/sublime_text $2
+echo  "What project you need : "  # choose type of project
+
+echo "1 python"   
+echo "2 bash"
+
+read doProg
+
+case $doProg in
+1)
+cd Documents/Python/Projects          #dir of my project
+echo "Name of Project"
+read project_name
+mkdir $project_name                   # create project dir
+cd $project_name
+touch file.py                             #create new file
+/opt/sublime_text/sublime_text file.py    #open file in sublime
 ;;
 
+
 2)
-cd Documents/Bash
-ls
-mkdir $1
-cd $1
-touch $2
-/opt/sublime_text/sublime_text $2
+cd Documents/Bash                      # dir of my project
+echo "Name of Project"
+read project_name
+mkdir $project_name                    # create project dir
+cd $project_name
+touch file.py                            #create new file 
+/opt/sublime_text/sublime_text file.py   #open file in sublime
 ;;
 
 esac
+
+;;
+
+
+2)
+echo "somethink else"
+;;
+esac
+
+
